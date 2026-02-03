@@ -1,0 +1,44 @@
+<mvc:View controllerName="zcustedi.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" showHeader="false" backgroundDesign="Solid" class="sapUiSizeCompact sapUiSizeCozy">
+        <!-- <customHeader>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Title text="{i18n>title}"/>
+                <ToolbarSpacer/>
+            </Toolbar>
+        </customHeader> -->
+        <content>
+            <VBox fitContainer="true" justifyContent="Start" alignContent="Stretch" alignItems="Stretch" width="100%" height="100%" class="sapUiSizeCompact sapUiSizeCozy">
+                <HBox backgroundDesign="Solid" width="100%" justifyContent="Start" class="rPageBox sapUiResponsiveContentPadding sapUiTinyMarginBottom">
+                    <Label text="{i18n>customer} :" design="Bold" class="sapUiLargeMarginBegin sapUiTinyMarginTop"/>
+
+                    <Input id="custInput" valueHelpOnly="true" editable="true" placeholder="{i18n>customer}" width="16em" class="sapUiSmallMarginBegin" valueHelpRequest="openCustomerF4" showValueHelp="true"/>
+                    <Input id="custName" required="true" width="14em" placeholder="{i18n>customerName}" editable="false" class="sapUiTinyMarginBegin" />
+
+                    <Label text="{i18n>billingDoc} :" design="Bold" class="sapUiMediumMarginBegin sapUiTinyMarginTop"/>
+
+                    <Input id="billingInput" valueHelpOnly="true" required="true" editable="false" width="14em" placeholder="{i18n>billingDoc}" class="sapUiSmallMarginBegin" showValueHelp="true" valueHelpRequest="openBillingDocF4"/>
+                    <Button text="{i18n>go}" type="Emphasized" width="8em" class="sapUiSmallMarginBegin" press="loadFormData"/>
+                    <!-- <Button text="test" type="Emphasized" width="8em" class="sapUiSmallMarginBegin" press="downloadData"/> -->
+                </HBox>
+                <VBox id="bajajBox" fitContainer="true" visible="{visModel>/bajajVisible}" justifyContent="Start" alignContent="Stretch" alignItems="Stretch" width="100%" height="100%" class="rPageBox sapUiSizeCompact sapUiSizeCozy">
+                    <core:Fragment fragmentName="zcustedi.fragments.bajajForm" type="XML" />
+                </VBox>
+                <VBox id="mahBox" fitContainer="true" visible="{visModel>/mahVisible}" justifyContent="Start" alignContent="Stretch" alignItems="Stretch" width="100%" height="100%" class="rPageBox sapUiSizeCompact sapUiSizeCozy">
+                    <core:Fragment fragmentName="zcustedi.fragments.mahindraForm" type="XML" />
+                </VBox>
+                <VBox id="endBox" fitContainer="true" visible="{visModel>/endVisible}" justifyContent="Start" alignContent="Stretch" alignItems="Stretch" width="100%" height="100%" class="rPageBox sapUiSizeCompact sapUiSizeCozy">
+                    <core:Fragment fragmentName="zcustedi.fragments.enduranceForm" type="XML" />
+                </VBox>
+                <VBox id="pvplBox" fitContainer="true" visible="{visModel>/pvplVisible}" justifyContent="Start" alignContent="Stretch" alignItems="Stretch" width="100%" height="100%" class="rPageBox sapUiSizeCompact sapUiSizeCozy">
+                    <core:Fragment fragmentName="zcustedi.fragments.pvplForm" type="XML" />
+                </VBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

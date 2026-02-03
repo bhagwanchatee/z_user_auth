@@ -1,0 +1,61 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<f:SimpleForm id="mahForm" editable="true" layout="ColumnLayout" labelSpanL="5" labelSpanM="5" labelSpanS="12" columnsM="2" columnsL="4" columnsXL="4">
+		<f:toolbar>
+			<Toolbar id="mahTB">
+				<Title id="mahTitle"/>
+				<ToolbarSpacer />
+				<Button icon="sap-icon://download-from-cloud" text="{i18n>download}" type="Ghost" press="exportExcelData"/>
+			</Toolbar>
+		</f:toolbar>
+		<f:content>
+			<Label design="Bold" text="{i18n>mposano}" />
+			<Input width="20em" editable="false" value="{mahDocModel>PurchaseOrderByCustomer}" id="mposano"/>
+
+			<Label design="Bold" text="{i18n>mitemsrno}" />
+			<Input width="20em" editable="false" value="{mahDocModel>UnderlyingPurchaseOrderItem}" id="mitemsrno"/>
+
+			<Label design="Bold" text="{i18n>mpartno}" />
+			<Input width="20em" editable="false" value="{mahDocModel>MaterialByCustomer}" id="mpartno"/>
+
+			<Label design="Bold" text="{i18n>masnqty}" />
+			<Input width="20em" editable="false" value="{mahDocModel>BillingQuantity}" id="masnqty"/>
+
+			<Label design="Bold" text="{i18n>minvno}" />
+			<Input width="20em" editable="false" value="{mahDocModel>BillingDocument}" id="minvno"/>
+
+			<Label design="Bold" text="{i18n>CustInvNo}" />
+			<Input width="20em" editable="false" value="{mahDocModel>CustInvNo}" id="mCustInvNo"/>
+
+			<Label design="Bold" text="{i18n>minvdt}" />
+			<Input width="20em" editable="false" value="{mahDocModel>BillingDocumentDate}" id="minvdt"/>
+
+			<Label design="Bold" text="{i18n>mmatbaspr}" />
+			<Input width="20em" editable="false" value="{mahDocModel>matBasePrice}" id="mmatbaspr"/>
+
+			<Label design="Bold" text="{i18n>minvamtintcs}" />
+			<Input width="20em" editable="false" value="{mahDocModel>NetAmount}" id="minvamtintcs"/>
+
+			<Label design="Bold" text="{i18n>mlrno}" />
+			<Input width="20em" editable="false" value="{mahDocModel>YY1_LRNO_DLH}" id="mlrno"/>
+
+			<Label design="Bold" text="{i18n>mlrdt}" />
+			<Input width="20em" editable="false" value="{mahDocModel>YY1_LR_DATE_DLH}" id="mlrdt"/>
+
+			<Label design="Bold" text="{i18n>mvehno}" />
+			<Input width="20em" editable="false" value="{mahDocModel>IN_EDocEInvcVehicleNumber}" id="mvehno"/>
+
+
+			<Label design="Bold" text="{i18n>mirnno}" />
+			<Input width="20em" editable="false" value="{mahDocModel>IN_ElectronicDocInvcRefNmbr}" id="mirnno"/>
+
+			<Label design="Bold" text="{i18n>mvengst}" />
+			<Input width="20em" editable="false" value="{mahDocModel>venGST}" id="mvengst"/>
+
+			<Label design="Bold" text="{i18n>mmahgst}" />
+			<Input width="20em" editable="false" value="{mahDocModel>GSTIN}" id="mmahgst"/>
+		</f:content>
+	</f:SimpleForm>
+</core:FragmentDefinition>

@@ -1,0 +1,1989 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="cds_zs_sd_edi_integration" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="I_AccountingDocumentStdVHType" sap:label="Accounting Document" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CompanyCode"/>
+                    <PropertyRef Name="FiscalYear"/>
+                    <PropertyRef Name="AccountingDocument"/>
+                </Key>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Company Code"/>
+                <Property Name="FiscalYear" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Fiscal Year"/>
+                <Property Name="AccountingDocument" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Journal Entry"/>
+            </EntityType>
+            <EntityType Name="billingDocVhType" sap:label="Billing Document" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BillingDocument"/>
+                </Key>
+                <Property Name="BillingDocument" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Billing Document"/>
+                <Property Name="SDDocumentCategory" Type="Edm.String" MaxLength="4" sap:label="SD Document Category"/>
+                <Property Name="BillingDocumentCategory" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Billing Category"/>
+                <Property Name="BillingDocumentType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Billing Type"/>
+                <Property Name="CreatedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Created By" sap:quickinfo="Name of Person Responsible for Creating the Object"/>
+                <Property Name="CreationDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Created On" sap:quickinfo="Record Creation Date"/>
+                <Property Name="CreationTime" Type="Edm.Time" Precision="0" sap:label="Time" sap:quickinfo="Entry time"/>
+                <Property Name="LastChangeDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Changed On" sap:quickinfo="Last Changed On"/>
+                <Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Time Stamp" sap:quickinfo="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+                <Property Name="LogicalSystem" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Logical System"/>
+                <Property Name="SalesOrganization" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Sales Organization"/>
+                <Property Name="DistributionChannel" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Distribution Channel"/>
+                <Property Name="Division" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Division"/>
+                <Property Name="BillingDocumentDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Billing Date"/>
+                <Property Name="BillingDocumentIsCancelled" Type="Edm.Boolean" sap:label="Canceled" sap:quickinfo="Billing document is canceled"/>
+                <Property Name="CancelledBillingDocument" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Canceled Bill. Doc." sap:quickinfo="Number of canceled billing document" sap:value-list="standard"/>
+                <Property Name="BillingDocCombinationCriteria" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Combination Criteria" sap:quickinfo="Combination criteria in the billing document"/>
+                <Property Name="ManualInvoiceMaintIsRelevant" Type="Edm.Boolean" sap:label="Man. Invoice Maint." sap:quickinfo="Manual Invoice Maintenance"/>
+                <Property Name="NmbrOfPages" Type="Edm.String" MaxLength="3" sap:display-format="NonNegative" sap:label="Number of Pages" sap:quickinfo="Number of pages of invoice"/>
+                <Property Name="IsIntrastatReportingRelevant" Type="Edm.Boolean" sap:label="Intrastat Relevance" sap:quickinfo="Relevant for Intrastat Reporting"/>
+                <Property Name="IsIntrastatReportingExcluded" Type="Edm.Boolean" sap:label="Intrastat Exclusion" sap:quickinfo="Exclude from Intrastat Reporting"/>
+                <Property Name="BillingDocumentIsTemporary" Type="Edm.Boolean" sap:label="Draft Indicator" sap:quickinfo="IsDraft Indicator"/>
+                <Property Name="TotalNetAmount" Type="Edm.Decimal" Precision="15" Scale="3" sap:unit="TransactionCurrency" sap:variable-scale="true" sap:label="Net Value" sap:quickinfo="Net Value in Document Currency"/>
+                <Property Name="TransactionCurrency" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Document Currency" sap:quickinfo="SD Document Currency" sap:semantics="currency-code"/>
+                <Property Name="StatisticsCurrency" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Statistics Currency" sap:semantics="currency-code"/>
+                <Property Name="TotalTaxAmount" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="TransactionCurrency" sap:variable-scale="true" sap:label="Tax Amount" sap:quickinfo="Tax Amount in Document Currency"/>
+                <Property Name="CustomerPriceGroup" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Customer Price Group"/>
+                <Property Name="PriceListType" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Price List Type"/>
+                <Property Name="TaxDepartureCountry" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Tax Departure C/R" sap:quickinfo="Tax Departure Country/Region"/>
+                <Property Name="VATRegistration" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="VAT Registration No." sap:quickinfo="VAT Registration Number"/>
+                <Property Name="VATRegistrationOrigin" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Origin Sales Tax No." sap:quickinfo="Origin of Sales Tax Number"/>
+                <Property Name="VATRegistrationCountry" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Ctry/Rgn Sls Tax No." sap:quickinfo="Country/Region of Sales Tax ID Number"/>
+                <Property Name="HierarchyTypePricing" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="HierarchyTypePricing" sap:quickinfo="Hierarchy type for pricing"/>
+                <Property Name="CustomerTaxClassification1" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tax Class.1 Customer" sap:quickinfo="Tax Classification 1 for Customer"/>
+                <Property Name="CustomerTaxClassification2" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tax Class.2 Customer" sap:quickinfo="Tax Classification 2 for Customer"/>
+                <Property Name="CustomerTaxClassification3" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tax Class.3 Customer" sap:quickinfo="Tax Classification 3 for Customer"/>
+                <Property Name="CustomerTaxClassification4" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tax Class.4 Customer" sap:quickinfo="Tax Classification 4 for Customer"/>
+                <Property Name="CustomerTaxClassification5" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tax Class.5 Customer" sap:quickinfo="Tax Classification 5 for Customer"/>
+                <Property Name="CustomerTaxClassification6" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tax Class.6 Customer" sap:quickinfo="Tax Classification 6 for Customer"/>
+                <Property Name="CustomerTaxClassification7" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tax Class.7 Customer" sap:quickinfo="Tax Classification 7 for Customer"/>
+                <Property Name="CustomerTaxClassification8" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tax Class.8 Customer" sap:quickinfo="Tax Classification 8 for Customer"/>
+                <Property Name="CustomerTaxClassification9" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Tax Class.9 Customer" sap:quickinfo="Tax Classification 9 for Customer"/>
+                <Property Name="IsEUTriangularDeal" Type="Edm.Boolean" sap:label="EU Triangular Deal" sap:quickinfo="Indicator: Triangular Deal Within the EU"/>
+                <Property Name="SDPricingProcedure" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Pricing Procedure" sap:quickinfo="Pricing Procedure in Pricing"/>
+                <Property Name="ShippingCondition" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Shipping Conditions"/>
+                <Property Name="PlantSupplier" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Sppl. No. Plnt" sap:quickinfo="Supplier Number of Plant"/>
+                <Property Name="IncotermsVersion" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Incoterms Version"/>
+                <Property Name="IncotermsClassification" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Incoterms" sap:quickinfo="Incoterms (Part 1)"/>
+                <Property Name="IncotermsTransferLocation" Type="Edm.String" MaxLength="28" sap:label="Incoterms (Part 2)"/>
+                <Property Name="IncotermsLocation1" Type="Edm.String" MaxLength="70" sap:label="Incoterms Location 1"/>
+                <Property Name="IncotermsLocation2" Type="Edm.String" MaxLength="70" sap:label="Incoterms Location 2"/>
+                <Property Name="PayerParty" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:text="to_PayerParty/CustomerName" sap:label="Payer" sap:value-list="standard"/>
+                <Property Name="ContractAccount" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Contract Account" sap:quickinfo="Contract Account Number"/>
+                <Property Name="CustomerPaymentTerms" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Terms of Payment" sap:quickinfo="Key for Terms of Payment"/>
+                <Property Name="PaymentMethod" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Payment Method"/>
+                <Property Name="PaymentReference" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Payment Reference"/>
+                <Property Name="FixedValueDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Fixed Value Date"/>
+                <Property Name="AdditionalValueDays" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Addit. Value Days" sap:quickinfo="Additional Value Days"/>
+                <Property Name="SEPAMandate" Type="Edm.String" MaxLength="35" sap:display-format="UpperCase" sap:label="Mandate Reference" sap:quickinfo="Unique Reference to Mandate for each Payee"/>
+                <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Company Code" sap:value-list="standard"/>
+                <Property Name="FiscalYear" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Fiscal Year"/>
+                <Property Name="AccountingDocument" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Document Number" sap:quickinfo="Document Number of an Accounting Document" sap:value-list="standard"/>
+                <Property Name="FiscalPeriod" Type="Edm.String" MaxLength="3" sap:display-format="NonNegative" sap:label="Posting Period"/>
+                <Property Name="CustomerAccountAssignmentGroup" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Acct Assmt Grp Cust." sap:quickinfo="Account Assignment Group for Customer"/>
+                <Property Name="AccountingExchangeRateIsSet" Type="Edm.Boolean" sap:label="Set Exchange Rate" sap:quickinfo="Exchange Rate Setting"/>
+                <Property Name="AccountingExchangeRate" Type="Edm.Decimal" Precision="9" Scale="5" sap:label="Accounting Exchange Rate" sap:quickinfo="Exchange Rate for FI Postings"/>
+                <Property Name="ExchangeRateDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Translation Date"/>
+                <Property Name="ExchangeRateType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Exchange Rate Type"/>
+                <Property Name="DocumentReferenceID" Type="Edm.String" MaxLength="16" sap:display-format="UpperCase" sap:label="Reference" sap:quickinfo="Reference Document Number"/>
+                <Property Name="AssignmentReference" Type="Edm.String" MaxLength="18" sap:label="Assignment" sap:quickinfo="Assignment Number"/>
+                <Property Name="ReversalReason" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Reversal Reason" sap:quickinfo="Reason for Reversal or Inverse Posting"/>
+                <Property Name="DunningArea" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:text="DunningArea_Text" sap:label="Dunning Area" sap:value-list="standard"/>
+                <Property Name="DunningArea_Text" Type="Edm.String" MaxLength="50" sap:label="Dunning Area Desc." sap:quickinfo="Dunning Area Description" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DunningBlockingReason" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Dunning Block"/>
+                <Property Name="DunningKey" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Dunning Key"/>
+                <Property Name="InternalFinancialDocument" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Financial Doc. No." sap:quickinfo="Financial doc. processing: Internal financial doc. number"/>
+                <Property Name="IsRelevantForAccrual" Type="Edm.Boolean" sap:label="Relevant for Accrual" sap:quickinfo="Is relevant for accrual"/>
+                <Property Name="SoldToParty" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:text="to_SoldToParty/CustomerName" sap:label="Sold-to Party" sap:value-list="standard"/>
+                <Property Name="PartnerCompany" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Trading Partner No." sap:quickinfo="Company ID of Trading Partner"/>
+                <Property Name="PurchaseOrderByCustomer" Type="Edm.String" MaxLength="35" sap:label="Customer Reference"/>
+                <Property Name="CustomerGroup" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Customer Group"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Dest. Country/Region" sap:quickinfo="Destination Country/Region"/>
+                <Property Name="CityCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="City Code"/>
+                <Property Name="SalesDistrict" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Sales District"/>
+                <Property Name="Region" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Region" sap:quickinfo="Region (State, Province, County)"/>
+                <Property Name="County" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="County Code"/>
+                <Property Name="CreditControlArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:text="CreditControlArea_Text" sap:label="Credit Control Area" sap:value-list="standard"/>
+                <Property Name="CreditControlArea_Text" Type="Edm.String" MaxLength="35" sap:label="Description" sap:quickinfo="Description of the credit control area" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="CustomerRebateAgreement" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Agreement" sap:quickinfo="Agreement (various conditions grouped together)"/>
+                <Property Name="PricingDocument" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Doc. Condition No." sap:quickinfo="Number of the Document Condition"/>
+                <Property Name="OverallSDProcessStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Overall Status" sap:quickinfo="Overall Processing Status (Header/All Items)"/>
+                <Property Name="OverallBillingStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Status" sap:quickinfo="SD Billing Status"/>
+                <Property Name="AccountingPostingStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Posting Status" sap:quickinfo="Posting Status of Billing Document"/>
+                <Property Name="AccountingTransferStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Posting Status" sap:quickinfo="Status for Transfer to Accounting"/>
+                <Property Name="BillingIssueType" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Issue Type" sap:quickinfo="Billing Issue Type"/>
+                <Property Name="InvoiceListStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Invoice List Status" sap:quickinfo="Invoice list status of billing document"/>
+                <Property Name="OvrlItmGeneralIncompletionSts" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="All Items" sap:quickinfo="Incompletion Status (All Items)"/>
+                <Property Name="OverallPricingIncompletionSts" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Pricing – All Items" sap:quickinfo="Pricing Incompletion Status (All Items)"/>
+                <Property Name="InvoiceClearingStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Clearing Status" sap:quickinfo="Clearing Status of Billing Document"/>
+                <Property Name="InvoiceListType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Invoice List Type"/>
+                <Property Name="InvoiceListBillingDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Inv. List Bill. Date" sap:quickinfo="Billing date for the invoice list"/>
+                <NavigationProperty Name="to_CancelledBillingDocument" Relationship="cds_zs_sd_edi_integration.assoc_2CED0D4FADAF420472C228E80FD0E3A4" FromRole="FromRole_assoc_2CED0D4FADAF420472C228E80FD0E3A4" ToRole="ToRole_assoc_2CED0D4FADAF420472C228E80FD0E3A4"/>
+                <NavigationProperty Name="to_PayerParty" Relationship="cds_zs_sd_edi_integration.assoc_17D67EB4147118A2E49B802F964CD55F" FromRole="FromRole_assoc_17D67EB4147118A2E49B802F964CD55F" ToRole="ToRole_assoc_17D67EB4147118A2E49B802F964CD55F"/>
+                <NavigationProperty Name="to_SoldToParty" Relationship="cds_zs_sd_edi_integration.assoc_11C4C141E61D57881C085CF995127F7B" FromRole="FromRole_assoc_11C4C141E61D57881C085CF995127F7B" ToRole="ToRole_assoc_11C4C141E61D57881C085CF995127F7B"/>
+            </EntityType>
+            <EntityType Name="I_BillingDocumentStdVHType" sap:label="Billing Document" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BillingDocument"/>
+                </Key>
+                <Property Name="BillingDocument" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Billing Document"/>
+            </EntityType>
+            <EntityType Name="I_CompanyCodeStdVHType" sap:label="Company Code" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CompanyCode"/>
+                </Key>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="CompanyCodeName" sap:label="Company Code"/>
+                <Property Name="CompanyCodeName" Type="Edm.String" MaxLength="25" sap:label="Company Name" sap:quickinfo="Name of Company Code or Company"/>
+            </EntityType>
+            <EntityType Name="I_CreditControlAreaStdVHType" sap:label="Credit Control Area" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CreditControlArea"/>
+                </Key>
+                <Property Name="CreditControlArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="CreditControlArea_Text" sap:label="Credit Control Area"/>
+                <Property Name="CreditControlArea_Text" Type="Edm.String" MaxLength="35" sap:label="Description" sap:quickinfo="Description of the credit control area" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="customerVhType" sap:label="Customer" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Customer"/>
+                </Key>
+                <Property Name="Customer" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="CustomerName" sap:label="Customer" sap:quickinfo="Customer Number"/>
+                <Property Name="CustomerName" Type="Edm.String" MaxLength="80" sap:label="Name of Customer"/>
+                <Property Name="CustomerFullName" Type="Edm.String" MaxLength="220" sap:display-format="UpperCase" sap:label="Customer Name" sap:quickinfo="Customer Full Name"/>
+                <Property Name="BPCustomerName" Type="Edm.String" MaxLength="81" sap:label="Business Partner - Customer Name" sap:quickinfo="Customer Name"/>
+                <Property Name="BPCustomerFullName" Type="Edm.String" MaxLength="220" sap:display-format="UpperCase" sap:label="Business Partner - Customer Full Name" sap:quickinfo="Customer Full Name"/>
+                <Property Name="CreatedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Created by" sap:quickinfo="Name of Person who Created the Object"/>
+                <Property Name="CreationDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Created On" sap:quickinfo="Record Created On"/>
+                <Property Name="AddressID" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Address"/>
+                <Property Name="CustomerClassification" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:text="CustomerClassification_Text" sap:label="Customer Classific." sap:quickinfo="Customer Classification"/>
+                <Property Name="CustomerClassification_Text" Type="Edm.String" MaxLength="20" sap:label="Customer Classification Description" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="VATRegistration" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="VAT Registration No." sap:quickinfo="VAT Registration Number"/>
+                <Property Name="CustomerAccountGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Account Group" sap:quickinfo="Customer Account Group"/>
+                <Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Authorization" sap:quickinfo="Authorization Group"/>
+                <Property Name="DeliveryIsBlocked" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Delivery block" sap:quickinfo="Central delivery block for the customer"/>
+                <Property Name="PostingIsBlocked" Type="Edm.Boolean" sap:label="Posting Block" sap:quickinfo="Central Posting Block"/>
+                <Property Name="BillingIsBlockedForCustomer" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Billing Block" sap:quickinfo="Central billing block for customer"/>
+                <Property Name="OrderIsBlockedForCustomer" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Order Block" sap:quickinfo="Central Order Block for Customer"/>
+                <Property Name="InternationalLocationNumber1" Type="Edm.String" MaxLength="7" sap:display-format="NonNegative" sap:label="Int. location no. 1" sap:quickinfo="International Location Number (Part 1)"/>
+                <Property Name="IsOneTimeAccount" Type="Edm.Boolean" sap:label="One-Time Account" sap:quickinfo="Indicator: Is the Account a One-Time Account?"/>
+                <Property Name="TaxJurisdiction" Type="Edm.String" MaxLength="15" sap:display-format="UpperCase" sap:label="Tax Jurisdiction"/>
+                <Property Name="Industry" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Industry" sap:quickinfo="Industry Key"/>
+                <Property Name="TaxNumberType" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Tax Number Type"/>
+                <Property Name="TaxNumber1" Type="Edm.String" MaxLength="16" sap:display-format="UpperCase" sap:label="Tax Number 1"/>
+                <Property Name="TaxNumber2" Type="Edm.String" MaxLength="11" sap:display-format="UpperCase" sap:label="Tax Number 2"/>
+                <Property Name="TaxNumber3" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Tax Number 3"/>
+                <Property Name="TaxNumber4" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Tax Number 4"/>
+                <Property Name="TaxNumber5" Type="Edm.String" MaxLength="60" sap:display-format="UpperCase" sap:label="Tax Number 5"/>
+                <Property Name="TaxNumber6" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Tax Number 6"/>
+                <Property Name="CustomerCorporateGroup" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Group Key"/>
+                <Property Name="Supplier" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Supplier" sap:quickinfo="Account Number of Supplier"/>
+                <Property Name="NielsenRegion" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Nielsen Indicator" sap:quickinfo="Nielsen ID"/>
+                <Property Name="IndustryCode1" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Industry Code 1"/>
+                <Property Name="IndustryCode2" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Industry Code 2"/>
+                <Property Name="IndustryCode3" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Industry Code 3"/>
+                <Property Name="IndustryCode4" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Industry Code 4"/>
+                <Property Name="IndustryCode5" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Industry Code 5"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Country/Region Key"/>
+                <Property Name="OrganizationBPName1" Type="Edm.String" MaxLength="35" sap:label="Name"/>
+                <Property Name="OrganizationBPName2" Type="Edm.String" MaxLength="35" sap:label="Name 2"/>
+                <Property Name="CityName" Type="Edm.String" MaxLength="35" sap:label="City"/>
+                <Property Name="PostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Postal Code"/>
+                <Property Name="StreetName" Type="Edm.String" MaxLength="35" sap:label="Street" sap:quickinfo="Street and House Number"/>
+                <Property Name="SortField" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Search Term" sap:quickinfo="Sort Field"/>
+                <Property Name="FaxNumber" Type="Edm.String" MaxLength="31" sap:label="Fax Number"/>
+                <Property Name="BR_SUFRAMACode" Type="Edm.String" MaxLength="9" sap:display-format="UpperCase" sap:label="Suframa Code"/>
+                <Property Name="Region" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Region" sap:quickinfo="Region (State, Province, County)"/>
+                <Property Name="TelephoneNumber1" Type="Edm.String" MaxLength="16" sap:label="Telephone 1" sap:quickinfo="First telephone number"/>
+                <Property Name="TelephoneNumber2" Type="Edm.String" MaxLength="16" sap:label="Telephone 2" sap:quickinfo="Second telephone number"/>
+                <Property Name="AlternativePayerAccount" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Alternative Payer" sap:quickinfo="Account Number of an Alternative Payer"/>
+                <Property Name="DataMediumExchangeIndicator" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="DME Recipient Code" sap:quickinfo="Recipient Code for Data Medium Exchange"/>
+                <Property Name="VATLiability" Type="Edm.Boolean" sap:label="Liable for VAT"/>
+                <Property Name="IsBusinessPurposeCompleted" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Purpose Completed" sap:quickinfo="Business Purpose Completed Flag"/>
+                <Property Name="ResponsibleType" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Tax Type"/>
+                <Property Name="FiscalAddress" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Fiscal address" sap:quickinfo="Account number of the master record with the fiscal address"/>
+                <Property Name="NFPartnerIsNaturalPerson" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Natural Person"/>
+                <Property Name="DeletionIndicator" Type="Edm.Boolean" sap:label="Deletion Flag" sap:quickinfo="Central Deletion Flag for Master Record"/>
+                <Property Name="Language" Type="Edm.String" MaxLength="2" sap:label="Language Key"/>
+                <Property Name="TradingPartner" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Trading Partner No." sap:quickinfo="Company ID of Trading Partner"/>
+                <Property Name="DeliveryDateTypeRule" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Deliv Date Rule" sap:quickinfo="Delivery Date Rule"/>
+                <Property Name="ExpressTrainStationName" Type="Edm.String" MaxLength="25" sap:label="Express station" sap:quickinfo="Express train station"/>
+                <Property Name="TrainStationName" Type="Edm.String" MaxLength="25" sap:label="Train station"/>
+                <Property Name="InternationalLocationNumber2" Type="Edm.String" MaxLength="5" sap:display-format="NonNegative" sap:label="Int. location no. 2" sap:quickinfo="International Location Number (Part 2)"/>
+                <Property Name="InternationalLocationNumber3" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative" sap:label="Check digit" sap:quickinfo="Check digit for the international location number"/>
+                <Property Name="CityCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="City Code"/>
+                <Property Name="County" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="County Code"/>
+                <Property Name="CustomerHasUnloadingPoint" Type="Edm.Boolean" sap:label="Unloading points" sap:quickinfo="Indicator: Unloading points exist"/>
+                <Property Name="CustomerWorkingTimeCalendar" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Working times" sap:quickinfo="Working Time Calendar"/>
+                <Property Name="IsCompetitor" Type="Edm.Boolean" sap:label="Competitors" sap:quickinfo="Indicator: Competitor"/>
+                <Property Name="TaxInvoiceRepresentativeName" Type="Edm.String" MaxLength="10" sap:label="Rep's Name" sap:quickinfo="Name of Representative"/>
+                <Property Name="BusinessType" Type="Edm.String" MaxLength="30" sap:label="Type of Business"/>
+                <Property Name="IndustryType" Type="Edm.String" MaxLength="30" sap:label="Type of Industry"/>
+                <Property Name="TW_CollvBillingIsSupported" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Consolidated Invoic." sap:quickinfo="Consolidated Invoicing for Taiwan"/>
+                <Property Name="AlternativePayeeIsAllowed" Type="Edm.Boolean" sap:label="Alt.payer in doc?" sap:quickinfo="Indicator: Is an alternative payer allowed in document?"/>
+                <Property Name="FreeDefinedAttribute01" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Attribute 1"/>
+                <Property Name="FreeDefinedAttribute02" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Attribute 2"/>
+                <Property Name="FreeDefinedAttribute03" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Attribute 3"/>
+                <Property Name="FreeDefinedAttribute04" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Attribute 4"/>
+                <Property Name="FreeDefinedAttribute05" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Attribute 5"/>
+                <Property Name="FreeDefinedAttribute06" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Attribute 6"/>
+                <Property Name="FreeDefinedAttribute07" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Attribute 7"/>
+                <Property Name="FreeDefinedAttribute08" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Attribute 8"/>
+                <Property Name="FreeDefinedAttribute09" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Attribute 9"/>
+                <Property Name="FreeDefinedAttribute10" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Attribute 10"/>
+                <Property Name="PaymentReason" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Payment Reason"/>
+                <Property Name="CustomerConditionGroup1" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Condition Group 1" sap:quickinfo="Customer Condition Group 1"/>
+                <Property Name="CustomerConditionGroup2" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Condition Group 2" sap:quickinfo="Customer Condition Group 2"/>
+                <Property Name="CustomerConditionGroup3" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Condition Group 3" sap:quickinfo="Customer Condition Group 3"/>
+                <Property Name="CustomerConditionGroup4" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Condition Group 4" sap:quickinfo="Customer Condition Group 4"/>
+                <Property Name="CustomerConditionGroup5" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Condition Group 5" sap:quickinfo="Customer Condition Group 5"/>
+                <Property Name="IsSalesProspect" Type="Edm.Boolean" sap:label="Prospect" sap:quickinfo="Indicator: Sales prospect"/>
+                <Property Name="PaymentIsBlockedForCustomer" Type="Edm.Boolean" sap:label="Payment block" sap:quickinfo="Payment Block"/>
+                <Property Name="IsConsumer" Type="Edm.Boolean" sap:label="Consumer" sap:quickinfo="Indicator: Consumer"/>
+                <Property Name="DataControllerSet" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Data Ctrlr. Set" sap:quickinfo="BP: Data Controller Set Flag"/>
+                <Property Name="DataController1" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController2" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController3" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController4" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController5" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController6" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController7" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController8" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController9" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController10" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="BusinessPartnerName1" Type="Edm.String" MaxLength="40" sap:label="Business Partner Organization  - Name 1" sap:quickinfo="Name 1"/>
+                <Property Name="BusinessPartnerName2" Type="Edm.String" MaxLength="40" sap:label="Business Partner Organization  - Name 2" sap:quickinfo="Name 2"/>
+                <Property Name="BusinessPartnerName3" Type="Edm.String" MaxLength="40" sap:label="Business Partner Organization  - Name 3" sap:quickinfo="Name 3"/>
+                <Property Name="BusinessPartnerName4" Type="Edm.String" MaxLength="40" sap:label="Business Partner Organization  - Name 4" sap:quickinfo="Name 4"/>
+                <Property Name="BPAddrCityName" Type="Edm.String" MaxLength="40" sap:label="Business Partner Address – City" sap:quickinfo="City"/>
+                <Property Name="BPAddrStreetName" Type="Edm.String" MaxLength="60" sap:label="Business Partner Address – Street" sap:quickinfo="Street"/>
+                <Property Name="AddressSearchTerm1" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Business Partner Address - Search Term 1" sap:quickinfo="Search Term 1"/>
+                <Property Name="AddressSearchTerm2" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Business Partner Address - Search Term 2" sap:quickinfo="Search Term 2"/>
+                <Property Name="DistrictName" Type="Edm.String" MaxLength="40" sap:label="Business Partner Address – District" sap:quickinfo="District"/>
+                <Property Name="POBoxDeviatingCityName" Type="Edm.String" MaxLength="40" sap:label="Business Partner Address - PO Box Deviating City" sap:quickinfo="PO Box city"/>
+                <Property Name="BusinessPartnerFormOfAddress" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Business Partner - Form of Address" sap:quickinfo="Form-of-Address Key"/>
+                <Property Name="BR_ICMSTaxPayerType" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="ICMS Taxpayer"/>
+            </EntityType>
+            <EntityType Name="I_Customer_VHType" sap:label="Customer" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Customer"/>
+                </Key>
+                <Property Name="Customer" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="BPCustomerName" sap:label="Customer" sap:quickinfo="Customer Number"/>
+                <Property Name="OrganizationBPName1" Type="Edm.String" MaxLength="35" sap:label="Customer Name 1" sap:quickinfo="Name"/>
+                <Property Name="BusinessPartnerName1" Type="Edm.String" MaxLength="40" sap:label="Business Partner Name 1" sap:quickinfo="Name 1"/>
+                <Property Name="OrganizationBPName2" Type="Edm.String" MaxLength="35" sap:label="Customer Name 2" sap:quickinfo="Name 2"/>
+                <Property Name="BusinessPartnerName2" Type="Edm.String" MaxLength="40" sap:label="Business Partner Name 2" sap:quickinfo="Name 2"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Country/Region" sap:quickinfo="Country/Region Key"/>
+                <Property Name="CityName" Type="Edm.String" MaxLength="35" sap:label="City"/>
+                <Property Name="BPAddrCityName" Type="Edm.String" MaxLength="40" sap:label="Business Partner Address City" sap:quickinfo="City"/>
+                <Property Name="StreetName" Type="Edm.String" MaxLength="35" sap:label="Street" sap:quickinfo="Street and House Number"/>
+                <Property Name="BPAddrStreetName" Type="Edm.String" MaxLength="60" sap:label="Business Partner Address Street" sap:quickinfo="Street"/>
+                <Property Name="PostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Postal Code"/>
+                <Property Name="CustomerName" Type="Edm.String" MaxLength="80" sap:label="Customer Name" sap:quickinfo="Name of Customer"/>
+                <Property Name="BPCustomerName" Type="Edm.String" MaxLength="81" sap:label="Business Partner Customer Name" sap:quickinfo="Customer Name"/>
+                <Property Name="CustomerAccountGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Account Group" sap:quickinfo="Customer Account Group"/>
+                <Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Authorization" sap:quickinfo="Authorization Group"/>
+                <Property Name="IsBusinessPurposeCompleted" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Purpose Complete Flag" sap:quickinfo="Business Purpose Completed Flag"/>
+                <Property Name="IsCompetitor" Type="Edm.Boolean" sap:label="Competitors" sap:quickinfo="Indicator: Competitor"/>
+                <Property Name="BusinessPartner" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Business Partner" sap:quickinfo="Business Partner Number"/>
+                <Property Name="BusinessPartnerType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Business Partner Type"/>
+                <Property Name="DataControllerSet" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Data Ctrlr. Set" sap:quickinfo="BP: Data Controller Set Flag"/>
+                <Property Name="DataController1" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController2" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController3" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController4" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController5" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController6" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController7" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController8" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController9" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+                <Property Name="DataController10" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data Controller" sap:quickinfo="BP: Data Controller (Internal Use Only)"/>
+            </EntityType>
+            <EntityType Name="I_DunningAreaStdVHType" sap:label="Dunning Area" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CompanyCode"/>
+                    <PropertyRef Name="DunningArea"/>
+                </Key>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Company Code"/>
+                <Property Name="DunningArea" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:text="DunningArea_Text" sap:label="Dunning Area"/>
+                <Property Name="DunningArea_Text" Type="Edm.String" MaxLength="50" sap:label="Dunning Area Desc." sap:quickinfo="Dunning Area Description" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__Currency" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CurrencyCode"/>
+                </Key>
+                <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:semantics="currency-code"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO Code"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Short Text"/>
+                <Property Name="DecimalPlaces" Type="Edm.Byte" Nullable="false" sap:label="Decimals"/>
+            </EntityType>
+            <EntityType Name="SAP__UnitOfMeasure" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="UnitCode"/>
+                </Key>
+                <Property Name="UnitCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Internal UoM" sap:semantics="unit-of-measure"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO Code"/>
+                <Property Name="ExternalCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Commercial"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Meas. Unit Text"/>
+                <Property Name="DecimalPlaces" Type="Edm.Int16" sap:label="Decimal Places"/>
+            </EntityType>
+            <EntityType Name="SAP__DocumentDescription" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="CreatedAt" Type="Edm.DateTime" Nullable="false" Precision="0" sap:label="Time Stamp"/>
+                <Property Name="FileName" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <NavigationProperty Name="Format" Relationship="cds_zs_sd_edi_integration.to_format" FromRole="FromRole_to_format" ToRole="ToRole_to_format"/>
+                <NavigationProperty Name="FileShare" Relationship="cds_zs_sd_edi_integration.to_fileshare" FromRole="FromRole_to_fileshare" ToRole="ToRole_to_fileshare"/>
+                <NavigationProperty Name="TableColumns" Relationship="cds_zs_sd_edi_integration.to_tablecolumns" FromRole="FromRole_to_tablecolumns" ToRole="ToRole_to_tablecolumns"/>
+                <NavigationProperty Name="CoverPage" Relationship="cds_zs_sd_edi_integration.to_coverpage" FromRole="FromRole_to_coverpage" ToRole="ToRole_to_coverpage"/>
+                <NavigationProperty Name="Signature" Relationship="cds_zs_sd_edi_integration.to_signature" FromRole="FromRole_to_signature" ToRole="ToRole_to_signature"/>
+                <NavigationProperty Name="PDFStandard" Relationship="cds_zs_sd_edi_integration.to_pdfstandard" FromRole="FromRole_to_pdfstandard" ToRole="ToRole_to_pdfstandard"/>
+                <NavigationProperty Name="Hierarchy" Relationship="cds_zs_sd_edi_integration.to_Hierarchy" FromRole="FromRole_to_Hierarchy" ToRole="ToRole_to_Hierarchy"/>
+                <NavigationProperty Name="Header" Relationship="cds_zs_sd_edi_integration.to_header" FromRole="FromRole_to_header" ToRole="ToRole_to_header"/>
+                <NavigationProperty Name="Footer" Relationship="cds_zs_sd_edi_integration.to_Footer" FromRole="FromRole_to_Footer" ToRole="ToRole_to_Footer"/>
+            </EntityType>
+            <EntityType Name="SAP__FileShare" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Repository" Type="Edm.String" Nullable="false" MaxLength="100" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Folder" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__Format" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="FitToPage" Type="cds_zs_sd_edi_integration.SAP__FitToPage" Nullable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FontSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Orientation" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PaperSize" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BorderSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MarginSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FontName" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Font Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Padding" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TextDirectionLayout" Type="Edm.String" Nullable="false" MaxLength="40" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__PDFStandard" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UsePDFAConformance" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DoEnableAccessibility" Type="Edm.Boolean" Nullable="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__TableColumns" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                    <PropertyRef Name="Name"/>
+                    <PropertyRef Name="Header"/>
+                </Key>
+                <Property Name="Format" Type="cds_zs_sd_edi_integration.SAP__TableColumnFormat" Nullable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Header" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HorizontalAlignment" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__CoverPage" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Title"/>
+                    <PropertyRef Name="Id"/>
+                    <PropertyRef Name="Name"/>
+                </Key>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__Signature" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DoSign" Type="Edm.Boolean" Nullable="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reason" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__Hierarchy" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DistanceFromRootElement" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DrillStateElement" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__PDFHeader" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Right" Type="cds_zs_sd_edi_integration.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Left" Type="cds_zs_sd_edi_integration.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Center" Type="cds_zs_sd_edi_integration.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__PDFFooter" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Right" Type="cds_zs_sd_edi_integration.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Left" Type="cds_zs_sd_edi_integration.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Center" Type="cds_zs_sd_edi_integration.SAP__HeaderFooterField" Nullable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__ValueHelp" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="VALUEHELP"/>
+                </Key>
+                <Property Name="VALUEHELP" Type="Edm.String" Nullable="false"/>
+                <Property Name="FIELD_VALUE" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="DESCRIPTION" Type="Edm.String"/>
+            </EntityType>
+            <ComplexType Name="SAP__FitToPage">
+                <Property Name="ErrorRecoveryBehavior" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Error behavior" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IsEnabled" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MinimumFontSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </ComplexType>
+            <ComplexType Name="SAP__TableColumnFormat">
+                <Property Name="DisplayFormat" Type="Edm.String" Nullable="false" MaxLength="40" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IANATimezone" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IANATimezoneProperty" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </ComplexType>
+            <ComplexType Name="SAP__HeaderFooterField">
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </ComplexType>
+            <Association Name="assoc_17D67EB4147118A2E49B802F964CD55F" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.billingDocVhType" Multiplicity="1" Role="FromRole_assoc_17D67EB4147118A2E49B802F964CD55F"/>
+                <End Type="cds_zs_sd_edi_integration.customerVhType" Multiplicity="0..1" Role="ToRole_assoc_17D67EB4147118A2E49B802F964CD55F"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_assoc_17D67EB4147118A2E49B802F964CD55F">
+                        <PropertyRef Name="Customer"/>
+                    </Principal>
+                    <Dependent Role="FromRole_assoc_17D67EB4147118A2E49B802F964CD55F">
+                        <PropertyRef Name="PayerParty"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_11C4C141E61D57881C085CF995127F7B" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.billingDocVhType" Multiplicity="1" Role="FromRole_assoc_11C4C141E61D57881C085CF995127F7B"/>
+                <End Type="cds_zs_sd_edi_integration.customerVhType" Multiplicity="0..1" Role="ToRole_assoc_11C4C141E61D57881C085CF995127F7B"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_assoc_11C4C141E61D57881C085CF995127F7B">
+                        <PropertyRef Name="Customer"/>
+                    </Principal>
+                    <Dependent Role="FromRole_assoc_11C4C141E61D57881C085CF995127F7B">
+                        <PropertyRef Name="SoldToParty"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_2CED0D4FADAF420472C228E80FD0E3A4" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.billingDocVhType" Multiplicity="1" Role="FromRole_assoc_2CED0D4FADAF420472C228E80FD0E3A4"/>
+                <End Type="cds_zs_sd_edi_integration.billingDocVhType" Multiplicity="0..1" Role="ToRole_assoc_2CED0D4FADAF420472C228E80FD0E3A4"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_assoc_2CED0D4FADAF420472C228E80FD0E3A4">
+                        <PropertyRef Name="BillingDocument"/>
+                    </Principal>
+                    <Dependent Role="ToRole_assoc_2CED0D4FADAF420472C228E80FD0E3A4">
+                        <PropertyRef Name="CancelledBillingDocument"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_format" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_format"/>
+                <End Type="cds_zs_sd_edi_integration.SAP__Format" Multiplicity="1" Role="ToRole_to_format"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_format">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_format">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_fileshare" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_fileshare"/>
+                <End Type="cds_zs_sd_edi_integration.SAP__FileShare" Multiplicity="1" Role="ToRole_to_fileshare"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_fileshare">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_fileshare">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_tablecolumns" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_tablecolumns"/>
+                <End Type="cds_zs_sd_edi_integration.SAP__TableColumns" Multiplicity="*" Role="ToRole_to_tablecolumns"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_tablecolumns">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_tablecolumns">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_coverpage" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_coverpage"/>
+                <End Type="cds_zs_sd_edi_integration.SAP__CoverPage" Multiplicity="*" Role="ToRole_to_coverpage"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_coverpage">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_coverpage">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_signature" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_signature"/>
+                <End Type="cds_zs_sd_edi_integration.SAP__Signature" Multiplicity="1" Role="ToRole_to_signature"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_signature">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_signature">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_pdfstandard" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_pdfstandard"/>
+                <End Type="cds_zs_sd_edi_integration.SAP__PDFStandard" Multiplicity="1" Role="ToRole_to_pdfstandard"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_pdfstandard">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_pdfstandard">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_Hierarchy" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_Hierarchy"/>
+                <End Type="cds_zs_sd_edi_integration.SAP__Hierarchy" Multiplicity="1" Role="ToRole_to_Hierarchy"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_Hierarchy">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_Hierarchy">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_header" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_header"/>
+                <End Type="cds_zs_sd_edi_integration.SAP__PDFHeader" Multiplicity="1" Role="ToRole_to_header"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_header">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_header">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_Footer" sap:content-version="1">
+                <End Type="cds_zs_sd_edi_integration.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_Footer"/>
+                <End Type="cds_zs_sd_edi_integration.SAP__PDFFooter" Multiplicity="1" Role="ToRole_to_Footer"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_Footer">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_Footer">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="cds_zs_sd_edi_integration_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx pdf">
+                <EntitySet Name="I_AccountingDocumentStdVH" EntityType="cds_zs_sd_edi_integration.I_AccountingDocumentStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="billingDocVh" EntityType="cds_zs_sd_edi_integration.billingDocVhType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_BillingDocumentStdVH" EntityType="cds_zs_sd_edi_integration.I_BillingDocumentStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_CompanyCodeStdVH" EntityType="cds_zs_sd_edi_integration.I_CompanyCodeStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_CreditControlAreaStdVH" EntityType="cds_zs_sd_edi_integration.I_CreditControlAreaStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="customerVh" EntityType="cds_zs_sd_edi_integration.customerVhType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_Customer_VH" EntityType="cds_zs_sd_edi_integration.I_Customer_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_DunningAreaStdVH" EntityType="cds_zs_sd_edi_integration.I_DunningAreaStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="SAP__FormatSet" EntityType="cds_zs_sd_edi_integration.SAP__Format" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__PDFStandardSet" EntityType="cds_zs_sd_edi_integration.SAP__PDFStandard" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__TableColumnsSet" EntityType="cds_zs_sd_edi_integration.SAP__TableColumns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__CoverPageSet" EntityType="cds_zs_sd_edi_integration.SAP__CoverPage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__SignatureSet" EntityType="cds_zs_sd_edi_integration.SAP__Signature" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__HierarchySet" EntityType="cds_zs_sd_edi_integration.SAP__Hierarchy" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__PDFHeaderSet" EntityType="cds_zs_sd_edi_integration.SAP__PDFHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__PDFFooterSet" EntityType="cds_zs_sd_edi_integration.SAP__PDFFooter" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__ValueHelpSet" EntityType="cds_zs_sd_edi_integration.SAP__ValueHelp" sap:content-version="1"/>
+                <EntitySet Name="SAP__Currencies" EntityType="cds_zs_sd_edi_integration.SAP__Currency" sap:content-version="1"/>
+                <EntitySet Name="SAP__UnitsOfMeasure" EntityType="cds_zs_sd_edi_integration.SAP__UnitOfMeasure" sap:content-version="1"/>
+                <EntitySet Name="SAP__MyDocumentDescriptions" EntityType="cds_zs_sd_edi_integration.SAP__DocumentDescription" sap:content-version="1"/>
+                <EntitySet Name="SAP__FileShareSet" EntityType="cds_zs_sd_edi_integration.SAP__FileShare" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="assoc_11C4C141E61D57881C085CF995127F7B" Association="cds_zs_sd_edi_integration.assoc_11C4C141E61D57881C085CF995127F7B" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="billingDocVh" Role="FromRole_assoc_11C4C141E61D57881C085CF995127F7B"/>
+                    <End EntitySet="customerVh" Role="ToRole_assoc_11C4C141E61D57881C085CF995127F7B"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_2CED0D4FADAF420472C228E80FD0E3A4" Association="cds_zs_sd_edi_integration.assoc_2CED0D4FADAF420472C228E80FD0E3A4" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="billingDocVh" Role="FromRole_assoc_2CED0D4FADAF420472C228E80FD0E3A4"/>
+                    <End EntitySet="billingDocVh" Role="ToRole_assoc_2CED0D4FADAF420472C228E80FD0E3A4"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_17D67EB4147118A2E49B802F964CD55F" Association="cds_zs_sd_edi_integration.assoc_17D67EB4147118A2E49B802F964CD55F" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="billingDocVh" Role="FromRole_assoc_17D67EB4147118A2E49B802F964CD55F"/>
+                    <End EntitySet="customerVh" Role="ToRole_assoc_17D67EB4147118A2E49B802F964CD55F"/>
+                </AssociationSet>
+                <AssociationSet Name="to_HierarchySet" Association="cds_zs_sd_edi_integration.to_Hierarchy" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_Hierarchy"/>
+                    <End EntitySet="SAP__HierarchySet" Role="ToRole_to_Hierarchy"/>
+                </AssociationSet>
+                <AssociationSet Name="to_tablecolumnsSet" Association="cds_zs_sd_edi_integration.to_tablecolumns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_tablecolumns"/>
+                    <End EntitySet="SAP__TableColumnsSet" Role="ToRole_to_tablecolumns"/>
+                </AssociationSet>
+                <AssociationSet Name="to_headerSet" Association="cds_zs_sd_edi_integration.to_header" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_header"/>
+                    <End EntitySet="SAP__PDFHeaderSet" Role="ToRole_to_header"/>
+                </AssociationSet>
+                <AssociationSet Name="to_FooterSet" Association="cds_zs_sd_edi_integration.to_Footer" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_Footer"/>
+                    <End EntitySet="SAP__PDFFooterSet" Role="ToRole_to_Footer"/>
+                </AssociationSet>
+                <AssociationSet Name="to_formatSet" Association="cds_zs_sd_edi_integration.to_format" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_format"/>
+                    <End EntitySet="SAP__FormatSet" Role="ToRole_to_format"/>
+                </AssociationSet>
+                <AssociationSet Name="to_fileshareSet" Association="cds_zs_sd_edi_integration.to_fileshare" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_fileshare"/>
+                    <End EntitySet="SAP__FileShareSet" Role="ToRole_to_fileshare"/>
+                </AssociationSet>
+                <AssociationSet Name="to_pdfstandardSet" Association="cds_zs_sd_edi_integration.to_pdfstandard" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_pdfstandard"/>
+                    <End EntitySet="SAP__PDFStandardSet" Role="ToRole_to_pdfstandard"/>
+                </AssociationSet>
+                <AssociationSet Name="to_signatureSet" Association="cds_zs_sd_edi_integration.to_signature" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_signature"/>
+                    <End EntitySet="SAP__SignatureSet" Role="ToRole_to_signature"/>
+                </AssociationSet>
+                <AssociationSet Name="to_coverpageSet" Association="cds_zs_sd_edi_integration.to_coverpage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_coverpage"/>
+                    <End EntitySet="SAP__CoverPageSet" Role="ToRole_to_coverpage"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CancelledBillingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Canceled Bill. Doc."/>
+                        <PropertyValue Property="CollectionPath" String="I_BillingDocumentStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CancelledBillingDocument"/>
+                                    <PropertyValue Property="ValueListProperty" String="BillingDocument"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/PayerParty" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Payer"/>
+                        <PropertyValue Property="CollectionPath" String="I_Customer_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PayerParty"/>
+                                    <PropertyValue Property="ValueListProperty" String="Customer"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="OrganizationBPName1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BusinessPartnerName1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="OrganizationBPName2"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BusinessPartnerName2"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Country"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CityName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="StreetName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PostalCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CustomerName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BPCustomerName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BusinessPartner"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CompanyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Company Code"/>
+                        <PropertyValue Property="CollectionPath" String="I_CompanyCodeStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CompanyCode"/>
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCodeName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/AccountingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Document Number"/>
+                        <PropertyValue Property="CollectionPath" String="I_AccountingDocumentStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CompanyCode"/>
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FiscalYear"/>
+                                    <PropertyValue Property="ValueListProperty" String="FiscalYear"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="AccountingDocument"/>
+                                    <PropertyValue Property="ValueListProperty" String="AccountingDocument"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/DunningArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Dunning Area"/>
+                        <PropertyValue Property="CollectionPath" String="I_DunningAreaStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CompanyCode"/>
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DunningArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="DunningArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="DunningArea_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/SoldToParty" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Sold-to Party"/>
+                        <PropertyValue Property="CollectionPath" String="I_Customer_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="SoldToParty"/>
+                                    <PropertyValue Property="ValueListProperty" String="Customer"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="OrganizationBPName1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BusinessPartnerName1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="OrganizationBPName2"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BusinessPartnerName2"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Country"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CityName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="StreetName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PostalCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CustomerName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BPCustomerName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="BusinessPartner"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CreditControlArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Credit Control Area"/>
+                        <PropertyValue Property="CollectionPath" String="I_CreditControlAreaStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CreditControlArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="CreditControlArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CreditControlArea_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ChangedAt" Path="LastChangeDateTime"/>
+                <Annotation Term="Common.CreatedBy" Path="CreatedByUser"/>
+                <Annotation Term="Common.SAPObjectNodeType">
+                    <Record>
+                        <PropertyValue Property="Name" String="BillingDocument"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities/I_AccountingDocumentStdVH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities/I_BillingDocumentStdVH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities/I_CompanyCodeStdVH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities/I_CreditControlAreaStdVH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities/I_Customer_VH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities/I_DunningAreaStdVH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities/billingDocVh" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_CancelledBillingDocument"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_PayerParty"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_SoldToParty"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities/customerVh" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SAPObjectNodeType">
+                    <Record>
+                        <PropertyValue Property="Name" String="Customer"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CreatedByUser" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="PersonalData.IsPotentiallySensitive" Bool="true"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.cds_zs_sd_edi_integration_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+                    <Record Type="Org.OData.Capabilities.V1.BatchSupportType">
+                        <PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.CurrencyCodes">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__Currencies"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.UnitsOfMeasure">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__UnitsOfMeasure"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="./$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="SAP__MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
+                        <PropertyValue Property="TextDirectionLayout" Bool="true"/>
+                        <PropertyValue Property="UploadToFileShare" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                        <PropertyValue Property="Treeview" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.SAP__DocumentDescription">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__MyDocumentDescriptions"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute07" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR7&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TaxNumber1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCD1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/OrganizationBPName2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=NAME2_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/InvoiceListType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FKART_RL&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/ExchangeRateDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=WWERT_D&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/POBoxDeviatingCityName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_POBXLOC&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/OrganizationBPName2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=NAME2_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/OrderIsBlockedForCustomer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AUFSD_X&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerPriceGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KONDA&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DeletionIndicator" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LOEVM_X&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController9" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/AssignmentReference" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ORDNR_V&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/LastChangeDateTime" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TIMESTAMPL&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CityName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ORT01_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CustomerAccountGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KTOKD&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/IncotermsLocation2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INCO3_L&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/BusinessPartnerName1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_NAME1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/SalesDistrict" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BZIRK&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/ResponsibleType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=J_1AFITP_D&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/PostalCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=PSTLZ&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/ContractAccount" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=CORR_VKONT_KK&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TaxNumber5" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCD5&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/IndustryType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INDTYP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute05" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR5&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/IsIntrastatReportingRelevant" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INTRA_REL&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController4" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerTaxClassification3" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TAXK3&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/IndustryCode3" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BRAN3&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/IsIntrastatReportingExcluded" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INTRA_EXCL&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController7" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerTaxClassification9" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TAXK9&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TaxNumberType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=J_1ATOID&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_CreditControlAreaStdVHType/CreditControlArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FARP_KKBER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FiscalAddress" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FISKN_D&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/SDDocumentCategory" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VBTYPL&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_AccountingDocumentStdVHType/AccountingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FARP_BELNR_D&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TradingPartner" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=RASSC&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/Country" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LAND1_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/Region" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=REGIO&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/InternationalLocationNumber2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BBSNR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CreationDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ERDAT_RF&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/BillingDocumentCategory" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FKTYP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/PostalCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=PSTLZ&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController4" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/PaymentReason" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FARP_PAYT_RSN&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/IsBusinessPurposeCompleted" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=CVP_XBLCK&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/PriceListType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=PLTYP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/AccountingTransferStatus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=RFBSK&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController3" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CreditControlArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KKBER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerAccountAssignmentGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KTGRD&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/BR_SUFRAMACode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=J_1BSUFRAMA&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/Customer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KUNNR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController7" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/BusinessPartnerFormOfAddress" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_TITLE&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CustomerConditionGroup1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KDKG1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerTaxClassification5" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TAXK5&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataControllerSet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_XDCSET&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute03" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR3&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/VATRegistrationCountry" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCEG_L&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/BillingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VBELN_VF&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/OrganizationBPName1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=NAME1_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute10" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR10&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController6" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/SalesOrganization" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VKORG&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute01" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerTaxClassification6" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TAXK6&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/FiscalPeriod" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=POPER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CityCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=CITYC&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/OverallSDProcessStatus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=GBSTK&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DeliveryDateTypeRule" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SD_DELIVERY_DATE_TYPE_RULE&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/County" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=COUNC&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/Country" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LAND1_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/IncotermsClassification" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INCO1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/IndustryCode5" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BRAN5&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TaxNumber4" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCD4&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/AuthorizationGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BRGRU&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/BusinessPartnerName1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_NAME1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/PayerParty" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KUNRG&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/PricingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KNUMV&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/FixedValueDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VALDT&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TaxNumber6" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCD6&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataControllerSet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_XDCSET&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/AccountingExchangeRateIsSet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=CPKUR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController8" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/ExpressTrainStationName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BAHNE&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/InternationalLocationNumber1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BBBNR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/AccountingPostingStatus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BUCHK&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/InternationalLocationNumber3" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BUBKZ&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CustomerConditionGroup3" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KDKG3&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/AlternativePayerAccount" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KNRZA&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute06" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR6&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TaxInvoiceRepresentativeName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=REPRES&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/IndustryCode4" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BRAN4&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/PostingIsBlocked" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SPERB_X&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/FiscalYear" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=GJAHR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/Country" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LLAND&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/DunningKey" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MSCHL&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/BusinessType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=GESTYP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/Industry" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BRSCH&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/VATRegistration" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCEG&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CustomerConditionGroup5" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KDKG5&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/IndustryCode1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BRAN1_D&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CustomerConditionGroup2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KDKG2&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/AddressID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ADRNR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute08" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR8&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/TransactionCurrency" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=WAERK&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/ExchangeRateType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KURST&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController6" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CustomerClassification" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KUKLA&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_CompanyCodeStdVHType/CompanyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BUKRS&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_BillingDocumentStdVHType/BillingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VBELN_VF&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/SoldToParty" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KUNAG&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/AlternativePayeeIsAllowed" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=XREGU&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerTaxClassification1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TAXK1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DeliveryIsBlocked" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LIFSD_X&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/VATRegistration" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCEG&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/DocumentReferenceID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=XBLNR_V1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/BillingDocumentType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FKART&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/DunningArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MABER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/Language" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SPRAS&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerTaxClassification8" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TAXK8&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/CustomerAccountGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KTOKD&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/ShippingCondition" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VSBED&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/TotalNetAmount" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=NETWR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TaxNumber3" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCD3&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/IndustryCode2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BRAN2&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/BillingDocumentDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FKDAT&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CompanyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BUKRS&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/IncotermsLocation1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INCO2_L&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController5" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/Supplier" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LIFNR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/BPAddrCityName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_CITY1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerTaxClassification2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TAXK2&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/BusinessPartner" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_PARTNER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/StreetName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STRAS_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/AddressSearchTerm1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_SORT1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/TotalTaxAmount" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MWSBP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute02" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR2&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute09" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR9&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/IncotermsVersion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INCOV&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/BR_ICMSTaxPayerType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=J_1BICMSTAXPAY&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/PurchaseOrderByCustomer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BSTKD&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/PaymentMethod" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SCHZW_BSEG&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/PartnerCompany" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=RASSC&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/DunningBlockingReason" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MANSP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TaxJurisdiction" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TXJCD&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/StreetName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STRAS_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/BPAddrCityName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_CITY1&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CreatedByUser" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ERNAM_RF&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/PaymentReference" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KIDNO&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerTaxClassification4" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TAXK4&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerRebateAgreement" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KNUMA&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/InvoiceListBillingDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FKDAT_RL&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/BillingIsBlockedForCustomer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FAKSD_X&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/IsBusinessPurposeCompleted" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=CVP_XBLCK&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/SortField" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SORTL&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TrainStationName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BAHNS&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TaxNumber2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCD2&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CustomerCorporateGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KONZS&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/IsEUTriangularDeal" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=XEGDR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerTaxClassification7" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TAXK7&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/VATRegistrationOrigin" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STCEG_H&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_DunningAreaStdVHType/DunningArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=FARP_MABER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/InternalFinancialDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LCNUM&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/AccountingDocument" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BELNR_D&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/Region" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=REGIO&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/BPAddrStreetName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_STREET&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/NFPartnerIsNaturalPerson" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STKZN&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/NielsenRegion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=NIELS&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController9" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/ManualInvoiceMaintIsRelevant" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MRNKZ&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/County" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=COUNC&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/BPAddrStreetName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_STREET&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/BusinessPartnerType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_BPKIND&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/AuthorizationGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BRGRU&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FaxNumber" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TELFX&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/OrganizationBPName1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=NAME1_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController10" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/VATLiability" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STKZU&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/Customer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KUNNR&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CityCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=CITYC&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController8" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/IsConsumer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=DEAR6&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CreationTime" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ERZET&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/AddressSearchTerm2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_SORT2&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/LogicalSystem" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LOGSYS&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/TW_CollvBillingIsSupported" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=TWGUI_CONSOLIDATE_INVOICE&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/DistributionChannel" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VTWEG&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/CityName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ORT01_GP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KDGRP&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/FreeDefinedAttribute04" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KATR4&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController10" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/Division" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SPART&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/AdditionalValueDays" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VALTG&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/IncotermsTransferLocation" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=INCO2&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/SEPAMandate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=SEPA_MNDID&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataMediumExchangeIndicator" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=DTAMS&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/TaxDepartureCountry" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=LANDTX&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/CustomerPaymentTerms" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=DZTERM&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/CustomerConditionGroup4" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KDKG4&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/InvoiceClearingStatus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=CLRST&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DistrictName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=AD_CITY2&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/DataController3" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.customerVhType/IsOneTimeAccount" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=XCPDK&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/SDPricingProcedure" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KALSMASD&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/ReversalReason" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=STGRD&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.billingDocVhType/OvrlItmGeneralIncompletionSts" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=UVALL_SU&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.I_Customer_VHType/DataController5" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=BU_DATA_CONTROLLER&amp;origin=MRF_100"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__Currency/CurrencyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__UnitOfMeasure/UnitCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+                <Annotation Term="SAP__CodeList.ExternalCode" Path="ExternalCode"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__UnitOfMeasure" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.AlternateKeys">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="Key">
+                                <Collection>
+                                    <Record>
+                                        <PropertyValue Property="Name" Path="ExternalCode"/>
+                                        <PropertyValue Property="Alias" String="ExternalCode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__DocumentDescription/CreatedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.Computed"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__DocumentDescription/CreatedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.Computed"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__Format/TextDirectionLayout" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.Description" String="Setting the text direction-layout is supported"/>
+                <Annotation Term="SAP__core.LongDescription" String="PDF supports setting the text direction-layout (e.g. left-to-right or right-to-left) in the document description"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__DocumentDescription" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__capabilties.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilties.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilties.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilties.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Format/Orientation"/>
+                                    <PropertyValue Property="AllowedExpressions" String="Multivalue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Format/PaperSize"/>
+                                    <PropertyValue Property="AllowedExpressions" String="Multivalue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__Format/FitToPage/ErrorRecoveryBehavior" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="../../../../SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27ErrorRecoveryBehaviour%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__Format/FontName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FontName%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__Format/PaperSize" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27PaperSize%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__PDFHeader/Left" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__PDFHeader/Right" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__PDFHeader/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__PDFFooter/Left" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__PDFFooter/Right" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__PDFFooter/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__TableColumns/Format/Display_Format" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27TableColumnFormat%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__FileShare" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FileShare%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__Format/Orientation" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FontName%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zs_sd_edi_integration.SAP__TableColumns/HorizontalAlignment" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HorizontalAlignment%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <atom:link rel="self" href="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/sap/ZB_SD_EDI_INTEGRATION/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://my420245-api.s4hana.cloud.sap/sap/opu/odata/sap/ZB_SD_EDI_INTEGRATION/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

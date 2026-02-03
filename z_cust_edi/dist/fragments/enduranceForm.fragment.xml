@@ -1,0 +1,58 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<f:SimpleForm id="endForm" editable="true" layout="ColumnLayout" labelSpanL="5" labelSpanM="5" labelSpanS="12" columnsM="2" columnsL="4" columnsXL="4">
+		<f:toolbar>
+			<Toolbar id="endTB">
+				<Title id="endTitle"/>
+				<ToolbarSpacer />
+				<Button icon="sap-icon://download-from-cloud" text="{i18n>download}" type="Ghost" press="exportExcelData"/>
+			</Toolbar>
+		</f:toolbar>
+		<f:content>
+			<Label design="Bold" text="{i18n>eposano}" />
+			<Input width="20em" editable="false" value="{endModel>PurchaseOrderByCustomer}" id="eposano"/>
+
+			<Label design="Bold" text="{i18n>einvno}" />
+			<Input width="20em" editable="false" value="{endModel>BillingDocument}" id="einvno"/>
+
+			<Label design="Bold" text="{i18n>CustInvNo}" />
+			<Input editable="false" width="20em" value="{endModel>CustInvNo}" id="eCustInvNo"/>
+
+			<Label design="Bold" text="{i18n>einvdt}" />
+			<Input width="20em" editable="false" value="{endModel>BillingDocumentDate}" id="einvdt"/>
+
+			<Label design="Bold" text="{i18n>elineitem}" />
+			<Input width="20em" editable="false" value="{endModel>UnderlyingPurchaseOrderItem}" id="elineitem"/>
+
+			<Label design="Bold" text="{i18n>ematerial}" />
+			<Input width="20em" editable="false" value="{endModel>MaterialByCustomer}" id="ematerial"/>
+
+			<Label design="Bold" text="{i18n>edesc}" />
+			<Input width="20em" editable="false" value="{endModel>MaterialDescription}" id="edesc"/>
+
+			<Label design="Bold" text="{i18n>ebasrate}" />
+			<Input width="20em" editable="false" value="{endModel>eBaseRate}" id="ebasrate"/>
+
+			<Label design="Bold" text="{i18n>einvqty}" />
+			<Input width="20em" editable="false" value="{endModel>BillingQuantity}" id="einvqty"/>
+
+			<Label design="Bold" text="{i18n>ebillamt}" />
+			<Input width="20em" editable="false" value="{endModel>NetAmount}" id="ebillamt"/>
+
+			<Label design="Bold" text="{i18n>evehno}" />
+			<Input width="20em" editable="false" value="{endModel>IN_EDocEInvcVehicleNumber}" id="evehno"/>
+
+
+			<Label design="Bold" text="{i18n>eirn}" />
+			<Input width="20em" editable="false" value="{endModel>IN_ElectronicDocInvcRefNmbr}" id="eirn"/>
+
+			<Label design="Bold" text="{i18n>eewaybillno}" />
+			<Input width="20em" editable="false" value="{endModel>IN_EDocEInvcEWbillNmbr}" id="eewaybillno"/>
+
+			<Label design="Bold" text="{i18n>eewaybilldt}" />
+			<Input width="20em" editable="false" value="{endModel>IN_EDocEInvcEWbillCreateDate}" id="eewaybilldt"/>
+		</f:content>
+	</f:SimpleForm>
+</core:FragmentDefinition>
