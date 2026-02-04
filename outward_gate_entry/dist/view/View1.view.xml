@@ -1,0 +1,109 @@
+<mvc:View controllerName="com.scp.fiori.outwardgateentry.controller.View1"
+    xmlns:core="sap.ui.core"    
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showFooter="true">
+        <Panel id="idPanelRAPO" class="sapUiContentPadding" headerText="General Data">
+            <HBox>
+                <VBox width="33%">
+                    <Label text="Plant" required="true"/>
+                    <ComboBox id="idDropdownPlant" selectedKey="" width="75%" selectionChange="onSelectPlant" items="{
+					    path: '/',
+                        sorter: { path: 'Plant' }
+                    }">
+                        <core:Item key="{Plant}" text="{Plant} - {PlantName}"/>
+                    </ComboBox>
+                </VBox>
+                <VBox width="33%">
+                    <Label text="Vehicle Type" required="true"/>
+                    <ComboBox id="idVehicalType" selectedKey="" width="75%" selectionChange="onSelectVehicalType" items="{
+					    path: '/',
+                        sorter: { path: 'VehicleType' }
+                    }">
+                        <core:Item key="{VehicleType}" text="{VehicleType}"/>
+                    </ComboBox>
+                </VBox>
+                <VBox width="33%">
+                    <Label text="Transporter" required="true"/>
+                    <Input id="id_Trasporter" showValueHelp="true" valueHelpRequest="transporterValueHelp" width="75%"/>
+                </VBox>
+            </HBox>
+
+            <HBox class="sapUiSmallMarginTop">
+                
+                <VBox width="33%">
+                    <Label text="Vehicle Number" required="true"/>
+                    <Input id="idVehicalNo" width="75%"/>
+                </VBox>
+                <VBox width="33%">
+                    <Label text="Date"/>
+                    <Input id="idDate" enabled="false" width="75%"/>
+                </VBox>
+                <VBox width="33%">
+                    <Label text="Time"/>
+                    <Input id="idTime" enabled="false" width="75%"/>
+                </VBox>
+            </HBox>
+
+            <VBox class="sapUiMediumMarginTop">
+                <Toolbar>
+                    <Title text="Item Data"/>
+                </Toolbar>
+                <Table id="idTable_OutwardItem" items="{path: '/'}">
+                    <headerToolbar>
+                        <OverflowToolbar>
+                            <ToolbarSpacer/>
+                            <Button icon="sap-icon://add" text="Add" press="onAddOutwardItem"/>
+                        </OverflowToolbar>
+                    </headerToolbar>
+                    <columns>
+                        <Column>
+                            <Text text="Item No" />
+                        </Column>
+                        <Column>
+                            <Text text="Billing No" />
+                        </Column>
+                        <Column>
+                            <Text text="ODN Number" />
+                        </Column>
+                        <Column>
+                            <Text text="Eway Bill" />
+                        </Column>
+                        <Column>
+                            <Text text="LR Number" />
+                        </Column>
+                        <Column>
+                            <Text text="Action" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{Itemno}"/>
+                                <Input value="{BillingDocument}" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="billingNumValueHelp"/>
+                                <Input value="{ODNNumber}" maxLength="16"/>
+                                <Input value="{IN_EDocEInvcEWbillNmbr}" maxLength="12"/>
+                                <Input value="{IN_EDocEInvcTransptDocNmbr}" maxLength="15"/>
+                                <Button icon="sap-icon://delete" press="onDeleteOutwardItem" visible="{= ${Itemno} !== '10' }"></Button>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+
+        </Panel>
+
+        <VBox id="idVBox_QRCode" visible="false">
+            <!-- Canvas element to render the QR code -->
+            <!-- <canvas id="qrCanvas" width="200" height="200" style="display:none;"></canvas> -->
+        </VBox>
+
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="Cancel Gate Entry" press="onCancelGateEntry"/>
+                <Button type="Emphasized" text="Save" press="onSave" class="sapUiSmallMarginEnd"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
