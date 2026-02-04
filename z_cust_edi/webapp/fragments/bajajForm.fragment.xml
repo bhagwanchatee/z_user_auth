@@ -1,0 +1,111 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<VBox id="bajajBoxH" fitContainer="true" visible="{visModel>/bajajVisible}" justifyContent="Start" alignContent="Stretch" alignItems="Stretch" width="100%" height="100%" class="rPageBox sapUiSizeCompact sapUiSizeCozy">
+		<f:SimpleForm id="bajajFormH" editable="true" layout="ColumnLayout" columnsM="3" columnsL="4" columnsXL="5">
+			<f:toolbar>
+				<Toolbar id="bajajTB">
+					<Title id="bajajTitle"/>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://download-from-cloud" text="{i18n>download}" type="Ghost" press="exportExcelData"/>
+				</Toolbar>
+			</f:toolbar>
+			<f:content>
+				<Label design="Bold" text="{i18n>bplant}" />
+				<Input editable="false" value="{bajajModel>Plant}" id="bplant"/>
+
+				<Label design="Bold" text="{i18n>bvcode}" />
+				<Input editable="false" value="{bajajModel>VendorCode}" id="bvcode"/>
+
+				<Label design="Bold" text="{i18n>bgstnno}" />
+				<Input editable="false" value="{bajajModel>GSTIN}" id="bgstnno"/>
+
+				<Label design="Bold" text="{i18n>bpono}" />
+				<Input editable="false" value="{bajajModel>PurchaseOrderByCustomer}" id="bpono"/>
+
+				<Label design="Bold" text="{i18n>blineno}" />
+				<Input editable="false" value="{bajajModel>UnderlyingPurchaseOrderItem}" id="blineno"/>
+
+				<Label design="Bold" text="{i18n>binvno}" />
+				<Input editable="false" value="{bajajModel>BillingDocument}" id="binvno"/>
+
+				<Label design="Bold" text="{i18n>CustInvNo}" />
+				<Input editable="false" value="{bajajModel>CustInvNo}" id="bCustInvNo"/>
+
+				<Label design="Bold" text="{i18n>binvdt}" />
+				<Input editable="false" value="{bajajModel>BillingDocumentDate}" id="binvdt"/>
+
+				<Label design="Bold" text="{i18n>bewaybill}" />
+				<Input editable="false" value="{bajajModel>IN_EDocEInvcEWbillNmbr}" id="bewaybill"/>
+
+				<Label design="Bold" text="{i18n>bewaybilldt}" />
+				<Input editable="false" value="{bajajModel>IN_EDocEInvcEWbillCreateDate}" id="bewaybilldt"/>
+
+				<Label design="Bold" text="{i18n>bvehicleno}" />
+				<Input editable="false" value="{bajajModel>IN_EDocEInvcVehicleNumber}" id="bvehicleno"/>
+
+				<Label design="Bold" text="{i18n>bsignedqr}" />
+				<TextArea height="5.5em" editable="false" value="{bajajModel>IN_ElectronicDocQRCodeTxt}" id="bsignedqr"/>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+	<VBox id="bajajBoxI" fitContainer="true" visible="{visModel>/bajajVisible}" justifyContent="Start" alignContent="Stretch" alignItems="Stretch" width="100%" height="100%" class="rPageBox sapUiSizeCompact sapUiSizeCozy">
+		<f:SimpleForm id="bajajFormI" editable="true" layout="ColumnLayout" columnsM="3" columnsL="4" columnsXL="5">
+			<f:content>
+
+				<Label design="Bold" text="{i18n>bitemcd}" />
+				<Input editable="false" value="{bajajModel>MaterialByCustomer}" id="bitemcd"/>
+
+				<Label design="Bold" text="{i18n>bhsn}" />
+				<Input editable="false" value="{bajajModel>hsn}" id="bhsn"/>
+
+				<Label design="Bold" text="{i18n>bsac}" />
+				<Input editable="false" value="{bajajModel>sac}" id="bsac"/>
+
+				<Label design="Bold" text="{i18n>binvqty}" />
+				<Input editable="false" value="{bajajModel>BillingQuantity}" id="binvqty"/>
+
+				<Label design="Bold" text="{i18n>bbasicrt}" />
+				<Input editable="false" value="{bajajModel>basicPrice}" id="bbasicrt"/>
+
+				<Label design="Bold" text="{i18n>bbasicval}" />
+				<Input editable="false" value="{bajajModel>basicValue}" id="bbasicval"/>
+
+				<Label design="Bold" text="{i18n>bsum}" />
+				<Input editable="false" value="{bajajModel>NetAmount}" id="bsum"/>
+
+				<Label design="Bold" text="{i18n>btaxbase}" />
+				<Input editable="false" value="{bajajModel>TaxAmount}" id="btaxbase"/>
+
+				<Label design="Bold" text="{i18n>bpnf}" />
+				<Input editable="false" value="{bajajModel>PnFCharges}" id="bpnf"/>
+
+				<Label design="Bold" text="{i18n>bfreight}" />
+				<Input editable="false" value="{bajajModel>freight}" id="bfreight"/>
+
+				<Label design="Bold" text="{i18n>bcgst}" />
+				<Input editable="false" value="{bajajModel>cgst}" id="bcgst"/>
+
+				<Label design="Bold" text="{i18n>bcgstamt}" />
+				<Input editable="false" value="{bajajModel>cgstAmt}" id="bcgstamt"/>
+
+				<Label design="Bold" text="{i18n>bsgst}" />
+				<Input editable="false" value="{bajajModel>sgst}" id="bsgst"/>
+
+				<Label design="Bold" text="{i18n>bsgstamt}" />
+				<Input editable="false" value="{bajajModel>sgstAmt}" id="bsgstamt"/>
+
+				<Label design="Bold" text="{i18n>bisgt}" />
+				<Input editable="false" value="{bajajModel>igst}" id="bisgt"/>
+
+				<Label design="Bold" text="{i18n>bigstamt}" />
+				<Input editable="false" value="{bajajModel>igstAmt}" id="bigstamt"/>
+
+				<Label design="Bold" text="{i18n>bbillamt}" />
+				<Input editable="false" value="{bajajModel>billAmt}" id="bbillamt"/>
+
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+</core:FragmentDefinition>

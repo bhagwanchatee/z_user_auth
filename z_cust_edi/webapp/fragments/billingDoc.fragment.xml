@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog titleAlignment="Center" class="sapUiSizeCompact" contentWidth="25%" contentHeight="70%"
+		showClearButton = "true" noDataText="No Data Found" title="{i18n>selectBilling}" liveChange="handleBillingSearch" confirm="handleCloseBillDoc" items="{
+			path : 'billingDocModel>/',
+			sorter : {
+				path : 'BillingDocumentDate',
+				descending : true
+			}
+		}" searchPlaceholder="{i18n>searchHolder}">
+        <StandardListItem class="sapUiSizeCompact" title="{billingDocModel>BillingDocument}" description="{billingDocModel>BillingDocumentDate}" type="Active" />
+    </SelectDialog>
+</core:FragmentDefinition>

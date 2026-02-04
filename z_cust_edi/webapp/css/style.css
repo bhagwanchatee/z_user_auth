@@ -1,0 +1,7 @@
+/* Enter your custom styles here */
+.rPageBox {
+    border-top: #e5e5e5;
+    border-width: thin;
+    border-top-style: ridge;
+    border-radius: 0.5rem;
+}

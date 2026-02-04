@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog titleAlignment="Center" class="sapUiSizeCompact" contentWidth="25%" contentHeight="70%"
+		showClearButton = "true" noDataText="No Data Found" title="{i18n>selectCust}" liveChange="handleCustSearch" confirm="handleCloseCust" items="{
+			path : 'customerModel>/',
+			sorter : {
+				path : 'Customer',
+				descending : false
+			}
+		}" searchPlaceholder="{i18n>searchHolder}">
+        <StandardListItem class="sapUiSizeCompact" title="{customerModel>Customer}" description="{customerModel>CustomerName}" type="Active" />
+    </SelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,57 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<f:SimpleForm id="pvplForm" editable="true" layout="ColumnLayout" labelSpanL="5" labelSpanM="5" labelSpanS="12" columnsM="2" columnsL="4" columnsXL="4">
+		<f:toolbar>
+			<Toolbar id="pvplTB">
+				<Title id="pvplTitle"/>
+				<ToolbarSpacer />
+				<Button icon="sap-icon://download-from-cloud" text="{i18n>download}" type="Ghost" press="exportExcelData"/>
+			</Toolbar>
+		</f:toolbar>
+		<f:content>
+			<Label design="Bold" text="{i18n>pposarno}" />
+			<Input width="20em" editable="false" value="{pvplModel>PurchaseOrderByCustomer}" id="pposarno"/>
+
+			<Label design="Bold" text="{i18n>pinvno}" />
+			<Input width="20em" editable="false" value="{pvplModel>BillingDocument}" id="pinvno"/>
+
+			<Label design="Bold" text="{i18n>CustInvNo}" />
+			<Input width="20em" editable="false" value="{pvplModel>CustInvNo}" id="pCustInvNo"/>
+
+			<Label design="Bold" text="{i18n>pinvdt}" />
+			<Input width="20em" editable="false" value="{pvplModel>BillingDocumentDate}" id="pinvdt"/>
+
+			<Label design="Bold" text="{i18n>pmatcode}" />
+			<Input width="20em" editable="false" value="{pvplModel>MaterialByCustomer}" id="pmatcode"/>
+
+			<Label design="Bold" text="{i18n>pasnqty}" />
+			<Input width="20em" editable="false" value="{pvplModel>BillingQuantity}" id="pasnqty"/>
+
+			<Label design="Bold" text="{i18n>pmatprice}" />
+			<Input width="20em" editable="false" value="{pvplModel>matBaseRate}" id="pmatprice"/>
+
+			<Label design="Bold" text="{i18n>passebleval}" />
+			<Input width="20em" editable="false" value="{pvplModel>asseValue}" id="passebleval"/>
+
+			<Label design="Bold" text="{i18n>pbasexduty}" />
+			<Input width="20em" editable="false" value="{pvplModel>eXiseAmt}" id="pbasexduty"/>
+
+			<Label design="Bold" text="{i18n>pgrossinvamt}" />
+			<Input width="20em" editable="false" value="{pvplModel>NetAmount}" id="pgrossinvamt"/>
+
+			<Label design="Bold" text="{i18n>plrno}" />
+			<Input width="20em" editable="false" value="{pvplModel>YY1_LRNO_DLH}" id="plrno"/>
+
+			<Label design="Bold" text="{i18n>plrdt}" />
+			<Input width="20em" editable="false" value="{pvplModel>YY1_LR_DATE_DLH}" id="plrdt"/>
+
+			<Label design="Bold" text="{i18n>pvehno}" />
+			<Input width="20em" editable="false" value="{pvplModel>IN_EDocEInvcVehicleNumber}" id="pvehno"/>
+
+			<Label design="Bold" text="{i18n>ptransno}" />
+			<Input width="20em" editable="false" value="{pvplModel>IN_EDocEInvcTransptDocNmbr}" id="ptransno"/>
+		</f:content>
+	</f:SimpleForm>
+</core:FragmentDefinition>
