@@ -1,0 +1,29 @@
+{
+  "generationParameters": {
+    "generationDate": "Mon Jun 09 2025 11:35:24 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://my420245.s4hana.cloud.sap/sap/opu/odata/sap/ZSERV_BIND_EPCG_LICENSE",
+    "appName": "zepcglicense",
+    "appTitle": "EPCG License Number",
+    "appDescription": "EPCG License Number",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.130.10",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.18.0",
+    "template": "List Report Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "ZCDS_EPCG_LICE"
+      }
+    ],
+    "launchText": "In order to launch the generated app, simply run the following from the generated app root folder:\n\n```\n    npm start\n```"
+  }
+}
