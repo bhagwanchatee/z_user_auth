@@ -1,0 +1,1 @@
+{"version":3,"file":"MainView.controller.js","names":["sap","ui","define","Controller","QUnit","module","test","assert","oAppController","onInit","ok"],"sources":["MainView-dbg.controller.js"],"mappings":"AAEAA,IAAIC,GAAGC,OAAO,CACb,qDACE,SAAUC,GACZ,aAEAC,MAAMC,OAAO,uBAEbD,MAAME,KAAK,wCAAyC,SAAUC,GAC7D,IAAIC,EAAiB,IAAIL,EACzBK,EAAeC,SACfF,EAAOG,GAAGF,EACX,EAED","ignoreList":[]}

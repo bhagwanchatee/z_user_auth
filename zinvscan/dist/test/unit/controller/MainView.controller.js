@@ -1,0 +1,2 @@
+sap.ui.define(["com/fiori/zinvscan/controller/MainView.controller"],function(n){"use strict";QUnit.module("MainView Controller");QUnit.test("I should test the MainView controller",function(i){var o=new n;o.onInit();i.ok(o)})});
+//# sourceMappingURL=MainView.controller.js.map
