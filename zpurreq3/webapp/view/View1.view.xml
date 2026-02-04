@@ -1,0 +1,491 @@
+<mvc:View controllerName="zpurreq3.controller.View1"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:table="sap.ui.table"
+  xmlns:f="sap.f"
+  displayBlock="true"
+  xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+  xmlns:smartTable="sap.ui.comp.smarttable"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+  xmlns="sap.m">
+  <!-- <Page id="page" title="{i18n>title}"> -->
+  		<f:DynamicPage headerExpanded="true" fitContent="true"  class="noSidePadding">
+    <f:header>
+				<f:DynamicPageHeader>
+					<f:content>
+    <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="ZMM_PURCHASE_REGISTER_FINAL" persistencyKey="SmartFilterBarKey" enableBasicSearch="false" search="onSearch" />
+    </f:content>
+				</f:DynamicPageHeader>
+			</f:header>
+			<f:content>
+    <table:Table id="purchaseTable" rows="{localJson>/Results}" visibleRowCount="10" rowsUpdated="onRowsUpdated"
+    >
+      <table:extension>
+        <Toolbar>
+          <Title text="Purchase Register" level="H2"/>
+          <ToolbarSpacer/>
+          <Button text="Export to Excel" press="onExport" icon="sap-icon://excel-attachment"/>
+        </Toolbar>
+      </table:extension>
+      <table:columns>
+        <table:Column width="11rem" >
+          <Label text="Miro Doc No."/>
+          <table:template>
+            <Text text="{localJson>miro_doc}"/>
+          </table:template>
+        </table:Column>
+        <table:Column width="11rem" >
+          <Label text="Miro Posting Date"/>
+          <table:template>
+            <Text text="{
+            path: 'localJson>miro_postingdate',
+            type: 'sap.ui.model.type.Date',
+            formatOptions: { pattern: 'dd.MM.yyyy' }}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Journal Entry No."/>
+          <table:template>
+            <Text text="{localJson>journalentry_no}"/>
+          </table:template>
+        </table:Column>
+               
+                <table:Column width="11rem" >
+          <Label text="Miro Line Item"/>
+          <table:template>
+            <Text text="{localJson>journalentry_item}"/>
+          </table:template>
+        </table:Column>
+
+                <table:Column width="11rem" >
+          <Label text="Material TYpe"/>
+          <table:template>
+            <Text text="{localJson>materialType}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Material"/>
+          <table:template>
+            <Text text="{localJson>material}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="18rem" >
+          <Label text="Material Description"/>
+          <table:template>
+            <Text text="{localJson>material_desc}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="HSN Code"/>
+          <table:template>
+            <Text text="{localJson>HSNCode}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="18rem" >
+          <Label text="HSN Code Desc."/>
+          <table:template>
+            <Text text="{localJson>HSNCode_Desc}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Plant"/>
+          <table:template>
+            <Text text="{localJson>Plant}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Purchasing Documente"/>
+          <table:template>
+            <Text text="{localJson>PurchasingDocument}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Purchasing Document Item"/>
+          <table:template>
+            <Text text="{localJson>PurchasingDocumentItem}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Material Profit Center"/>
+          <table:template>
+            <Text text="{localJson>ProfitCenter}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Fix Asset Code"/>
+          <table:template>
+            <Text text="{localJson>MasterFixedAsset}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Journal Entry Type"/>
+          <table:template>
+            <Text text="{localJson>AccountingDocumentType}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Miro Document Date"/>
+          <table:template>
+            <Text text="{path: 'localJson>miro_docdate',
+            type: 'sap.ui.model.type.Date',
+            formatOptions: { pattern: 'dd.MM.yyyy' }}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Miro Reference No."/>
+          <table:template>
+            <Text text="{localJson>miro_Refno}"/>
+          </table:template>
+        </table:Column>
+         <table:Column width="11rem" >
+          <Label text="Migo Doc No."/>
+          <table:template>
+            <Text text="{localJson>migo_Docno}"/>
+          </table:template>
+
+  
+
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Migo Posting Date"/>
+          <table:template>
+            <Text text="{
+            path: 'localJson>migo_Docno_date',
+            type: 'sap.ui.model.type.Date',
+            formatOptions: { pattern: 'dd.MM.yyyy' }}"/>
+          </table:template>
+
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Vendor Code"/>
+          <table:template>
+            <Text text="{localJson>VendorCode}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Vendor Name"/>
+          <table:template>
+            <Text text="{localJson>VendorName}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Vendor Pan No."/>
+          <table:template>
+            <Text text="{localJson>PanNumber}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Vendor MSME No."/>
+          <table:template>
+            <Text text="{localJson>VendorMSME}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Vendor GST No."/>
+          <table:template>
+            <Text text="{localJson>Vendor_GSTIN}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text=" Vendor State Code"/>
+          <table:template>
+            <Text text="{localJson>StateCode}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="18rem" >
+          <Label text="Vendor State Code Desc."/>
+          <table:template>
+            <Text text="{localJson>StateCode_Desc}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Migo/Miro GL No."/>
+          <table:template>
+            <Text text="{localJson>miro_gl}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="18rem" >
+          <Label text="Migo/Miro GL Description"/>
+          <table:template>
+            <Text text="{localJson>miro_glname}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Tax Code"/>
+          <table:template>
+            <Text text="{localJson>Miro_item_taxCode}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="18rem" >
+          <Label text="Miro Item Text Code Desc."/>
+          <table:template>
+            <Text text="{localJson>Miro_item_taxCode_dec}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Miro Quantity"/>
+          <table:template>
+            <Text text="{localJson>miro_Qty}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Miro UOM"/>
+          <table:template>
+            <Text text="{localJson>BaseUnit}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="PO Item Rate"/>
+          <table:template>
+            <Text text="{localJson>POItem_rate}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Miro Basic Amount"/>
+          <table:template>
+            <Text text="{localJson>BasicAmount}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="CGST GL Amount"/>
+          <table:template>
+            <Text text="{localJson>CGST}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="CGST Tax Rate %"/>
+          <table:template>
+            <Text text="{localJson>CGST_rate}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="SGST GL Amount"/>
+          <table:template>
+            <Text text="{localJson>SGST}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="SGST Tax Rate %"/>
+          <table:template>
+            <Text text="{localJson>SGST_rate}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="IGST GL AMount"/>
+          <table:template>
+            <Text text="{localJson>IGST}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="IGST Tax RAte %"/>
+          <table:template>
+            <Text text="{localJson>IGST_rate}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="TCS Amount"/>
+          <table:template>
+            <Text text="{localJson>TDS_VALUE}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Revised Basic Excluding GST Amt"/>
+          <table:template>
+            <Text text="{localJson>Revised_bas_exclud_GstAmt}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Non Credit CGST"/>
+          <table:template>
+            <Text text="{localJson>Non_cr_cgst}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Non Credit CGST %"/>
+          <table:template>
+            <Text text="{localJson>non_credit_cgst_per}"/>
+          </table:template>
+        </table:Column>
+                <table:Column width="11rem" >
+          <Label text="Non Credit SGST"/>
+          <table:template>
+            <Text text="{localJson>Non_cr_sgst}"/>
+          </table:template>
+        </table:Column>
+
+
+ <table:Column width="11rem" >
+          <Label text="Non Credit SGST %"/>
+          <table:template>
+            <Text text="{localJson>non_credit_sgst_per}"/>
+          </table:template>
+        </table:Column>
+<table:Column width="11rem" >
+          <Label text="Non Credit IGST"/>
+          <table:template>
+            <Text text="{localJson>Non_cr_igst}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Non Credit IGST %"/>
+          <table:template>
+            <Text text="{localJson>non_credit_igst_per}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Total Bill AMount"/>
+          <table:template>
+            <Text text="{localJson>Total_Amount}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="TDS Value"/>
+          <table:template>
+            <Text text="{localJson>tcs_amount}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Bill Amount After TDS"/>
+          <table:template>
+            <Text text="{localJson>BillAmt_afterTDS}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="TDS/TCS GL"/>
+          <table:template>
+            <Text text="{localJson>tds_gl}"/>
+          </table:template>
+        </table:Column><table:Column width="18rem" >
+          <Label text="TDS/TCS GL Description"/>
+          <table:template>
+            <Text text="{localJson>tds_gl_desc}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Net Weight"/>
+          <table:template>
+            <Text text="{localJson>NetWeight}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Net Weight Total Qty"/>
+          <table:template>
+            <Text text="{localJson>Netweight_tot_Qty}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Net Weight UOM"/>
+          <table:template>
+            <Text text="{localJson>net_weight_unit}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Gross Weight"/>
+          <table:template>
+            <Text text="{localJson>GrossWeight}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="City Name"/>
+          <table:template>
+            <Text text="{localJson>CityName}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Freight Amount"/>
+          <table:template>
+            <Text text="{localJson>freight_amount}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Miro Header Text"/>
+          <table:template>
+            <Text text="{localJson>miro_header_text}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Miro Line Item Wise Text"/>
+          <table:template>
+            <Text text="{localJson>miro_lineItem_text}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Miro Business Places"/>
+          <table:template>
+            <Text text="{localJson>miro_BusinessPlace}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="RCM Flag"/>
+          <table:template>
+            <Text text="{localJson>RCM_flag}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Eligibility Indicator"/>
+          <table:template>
+            <Text text="{localJson>Eligibility_ind}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Common Supply Indicator"/>
+          <table:template>
+            <Text text="{localJson>Common_supply_ind}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Available CGST"/>
+          <table:template>
+            <Text text="{localJson>cgst1}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Available SGST"/>
+          <table:template>
+            <Text text="{localJson>Sgst1}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Available IGST"/>
+          <table:template>
+            <Text text="{localJson>igst1}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Document Type"/>
+          <table:template>
+            <Text text="{localJson>DocumentType}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Type"/>
+          <table:template>
+            <Text text="{localJson>Type}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Original Document"/>
+          <table:template>
+            <Text text="{localJson>originalDocument}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Payment Due Date"/>
+          <table:template>
+            <Text text="{
+            path: 'localJson>PaymentDueDate',
+            type: 'sap.ui.model.type.Date',
+            formatOptions: { pattern: 'dd.MM.yyyy' }}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Vendor Status"/>
+          <table:template>
+            <Text text="{localJson>VendorStatus}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Company Code Currency"/>
+          <table:template>
+            <Text text="{localJson>CompanyCodeCurrency}"/>
+          </table:template>
+        </table:Column><table:Column width="11rem" >
+          <Label text="Unit of Weight"/>
+          <table:template>
+            <Text text="{localJson>WeightUnit}"/>
+          </table:template>
+        </table:Column>
+        <table:Column width="11rem" >
+          <Label text="Currency"/>
+          <table:template>
+            <Text text="{localJson>DocumentCurrency}"/>
+          </table:template>
+        </table:Column>
+         <table:Column width="11rem" >
+          <Label text="Transaction Currency"/>
+          <table:template>
+            <Text text="{localJson>TransactionCurrency}"/>
+          </table:template>
+        </table:Column>
+
+      </table:columns>
+    </table:Table>
+	</f:content>
+		</f:DynamicPage>
+
+  <!-- </Page> -->
+</mvc:View>
